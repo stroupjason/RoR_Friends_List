@@ -16,6 +16,6 @@ get 'home/about'
   #root "posts#index"
   #root "home#index"
   #root "home#index"
-  root "home#index"
+  root "friends#index"
 
 end
