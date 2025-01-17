@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  #scaffolding created this
   resources :friends
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

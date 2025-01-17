@@ -1,16 +1,35 @@
-<p style="color: green"><%= notice %></p>
+<p id="notice" style="color: green"><%= notice %></p>
 
-<% content_for :title, "Friends" %>
+<h1>Friend List</h1>
 
-<h1>Friends</h1>
-
-<div id="friends">
-  <% @friends.each do |friend| %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th colpan="3"></th>
+    </tr>
+  </thead>
+  
+  
+  <tbody>
+    <% @friends.each do |friend| %>
     <%= render friend %>
+    
     <p>
       <%= link_to "Show this friend", friend %>
+      <% content_for :title, "Friends" %>
     </p>
   <% end %>
-</div>
 
 <%= link_to "New friend", new_friend_path %>
+  </tbody>
+
+  
+</table>
+
+
+ 
