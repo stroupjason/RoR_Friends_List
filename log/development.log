@@ -1835,3 +1835,357 @@ Migrating to CreateFriends (20250117181635)
   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250117181635') RETURNING "version" /*application='Friends'*/[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Friends'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Friends'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-01-17 16:28:19 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Friends'*/[0m
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (1.9ms)[0m  [1m[34mSELECT "friends".* FROM "friends" /*action='index',application='Friends',controller='friends'*/[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/_friend.html.erb (Duration: 4.3ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered friends/index.html.erb within layouts/application (Duration: 59.7ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 5.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 93.1ms | GC: 0.0ms)
+Completed 200 OK in 300ms (Views: 99.5ms | ActiveRecord: 4.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/new" for 127.0.0.1 at 2025-01-17 16:28:25 -0700
+Processing by FriendsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/new.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 20.9ms | GC: 0.0ms)
+  Rendered friends/new.html.erb within layouts/application (Duration: 29.0ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 4.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | GC: 0.0ms)
+Completed 200 OK in 112ms (Views: 42.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2025-01-17 16:28:26 -0700
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (7.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" /*action='index',application='Friends',controller='friends'*/[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/_friend.html.erb (Duration: 2.6ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/index.html.erb within layouts/application (Duration: 65.1ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 68.8ms | GC: 0.0ms)
+Completed 200 OK in 144ms (Views: 62.9ms | ActiveRecord: 6.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:28:30 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (1.3ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 27.2ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | GC: 0.0ms)
+Completed 200 OK in 118ms (Views: 29.5ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:28:32 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.3ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 87ms (Views: 5.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:28:33 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 1.1ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 88ms (Views: 7.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:28:34 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | GC: 0.0ms)
+Completed 200 OK in 90ms (Views: 11.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:28:38 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 78ms (Views: 5.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2025-01-17 16:28:39 -0700
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (1.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends" /*action='index',application='Friends',controller='friends'*/[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/index.html.erb within layouts/application (Duration: 9.7ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | GC: 0.0ms)
+Completed 200 OK in 82ms (Views: 11.0ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1/edit" for 127.0.0.1 at 2025-01-17 16:28:42 -0700
+Processing by FriendsController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='edit',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/edit.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 13.9ms | GC: 2.2ms)
+  Rendered friends/edit.html.erb within layouts/application (Duration: 15.2ms | GC: 2.2ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | GC: 2.2ms)
+Completed 200 OK in 92ms (Views: 18.3ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 2.9ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:28:44 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.6ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | GC: 1.3ms)
+Completed 200 OK in 76ms (Views: 2.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 3.6ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2025-01-17 16:28:47 -0700
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" /*action='index',application='Friends',controller='friends'*/[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/index.html.erb within layouts/application (Duration: 31.4ms | GC: 2.6ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | GC: 4.0ms)
+Completed 200 OK in 118ms (Views: 44.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 4.6ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:28:49 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.8ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 1.0ms)
+Completed 200 OK in 119ms (Views: 5.3ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 5.0ms)
+
+
+Started GET "/friends/1/edit" for 127.0.0.1 at 2025-01-17 16:28:50 -0700
+Processing by FriendsController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='edit',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/edit.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 10.5ms | GC: 0.0ms)
+  Rendered friends/edit.html.erb within layouts/application (Duration: 12.2ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | GC: 0.0ms)
+Completed 200 OK in 87ms (Views: 14.5ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/friends/1" for 127.0.0.1 at 2025-01-17 16:28:52 -0700
+Processing by FriendsController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "friend" => {"first_name" => "Jason ", "last_name" => "Stroup", "email" => "[FILTERED]", "phone" => "1234567890", "twitter" => "@stroupjason"}, "commit" => "Update Friend", "id" => "1"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='update',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+Redirected to http://127.0.0.1:3000/friends/1
+Completed 302 Found in 183ms (ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:28:52 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.0ms)
+Completed 200 OK in 74ms (Views: 11.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:29:00 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 79ms (Views: 4.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:29:02 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | GC: 0.8ms)
+Completed 200 OK in 73ms (Views: 1.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:29:02 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 200 OK in 73ms (Views: 1.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:29:03 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (1.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 75ms (Views: 1.0ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-17 16:29:04 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (3.6ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | GC: 0.0ms)
+Completed 200 OK in 87ms (Views: 1.4ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2025-01-17 16:29:05 -0700
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" /*action='index',application='Friends',controller='friends'*/[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/_friend.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered friends/index.html.erb within layouts/application (Duration: 19.8ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | GC: 0.0ms)
+Completed 200 OK in 94ms (Views: 21.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends" for 127.0.0.1 at 2025-01-18 16:58:24 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Friends'*/[0m
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (1.8ms)[0m  [1m[34mSELECT "friends".* FROM "friends" /*action='index',application='Friends',controller='friends'*/[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/_friend.html.erb (Duration: 3.9ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered friends/_friend.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered friends/index.html.erb within layouts/application (Duration: 61.2ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 6.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 99.3ms | GC: 0.0ms)
+Completed 200 OK in 301ms (Views: 103.0ms | ActiveRecord: 3.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1" for 127.0.0.1 at 2025-01-18 16:58:32 -0700
+Processing by FriendsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (7.5ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='show',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 7.5ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 4.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | GC: 0.0ms)
+Completed 200 OK in 111ms (Views: 21.8ms | ActiveRecord: 7.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1/edit" for 127.0.0.1 at 2025-01-18 16:58:34 -0700
+Processing by FriendsController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mFriend Load (0.6ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = 1 LIMIT 1 /*action='edit',application='Friends',controller='friends'*/[0m
+  ↳ app/controllers/friends_controller.rb:63:in 'FriendsController#set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/edit.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 22.7ms | GC: 0.0ms)
+  Rendered friends/edit.html.erb within layouts/application (Duration: 44.2ms | GC: 0.0ms)
+  Rendered home/_header.html.erb (Duration: 14.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 62.9ms | GC: 0.0ms)
+Completed 200 OK in 158ms (Views: 64.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/friends/1/edit" for 127.0.0.1 at 2025-01-18 17:08:06 -0700
+  
+SyntaxError (/Users/jasonstroup/RoR_Friends_List/friends/config/routes.rb:24: syntax errors found
+  [2m22 | [m    get '/users/sign_out' => 'devise/sessions#destroy' 
+  [2m23 | [m
+[1;31m> [m[2m24 | [mend
+  [2m   | [m   [1;31m^[m expected a block beginning with `do` to end with `end`
+  [2m   | [m   [1;31m^[m unexpected end-of-input, assuming it is closing the parent top level context
+):
+  
+config/routes.rb:24: syntax errors found
